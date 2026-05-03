@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.exemplo.weather.grpc";
+option java_outer_classname = "WeatherProto";
+
+package weather;
+
+// Definição dos 5 serviços solicitados
+service WeatherService {
+  rpc ObterTemperaturaAtual (CityRequest) returns (TemperatureResponse);
+  rpc PrevisaoCincoDias (CityRequest) returns (ForecastResponse);
+  rpc ListarCidades (Empty) returns (CityListResponse);
+  rpc CadastrarCidade (CityRegistrationRequest) returns (RegistrationResponse);
+  rpc EstatisticasClimaticas (CityRequest) returns (StatsResponse);
+}
+
+// Mensagens vazias para chamadas sem parâmetros
+message Empty {}
+
+// Mensagens de Requisição
+message CityRequest {
+  string nome = 1;
+}
+
+message CityRegistrationRequest {
+  string nome = 1;
+  double temperatura_inicial = 2;
+}
+
+// Mensagens de Resposta
+message TemperatureResponse {
+  double temperatura = 1;
+}
+
+message ForecastResponse {
+  repeated double temperaturas_proximos_dias = 1; // 'repeated' funciona como uma lista/array
+}
+
+message CityListResponse {
+  repeated string cidades = 1;
+}
+
+message RegistrationResponse {
+  bool sucesso = 1;
+  string mensagem = 2;
+}
+
+message StatsResponse {
+  double media = 1;
+  double minima = 2;
+  double maxima = 3;
+}
