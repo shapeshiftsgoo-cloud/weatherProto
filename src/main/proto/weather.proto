@@ -1,12 +1,12 @@
 syntax = "proto3";
 
 option java_multiple_files = true;
-option java_package = "com.exemplo.weather.grpc";
+option java_package = "com.weatheringu.weatherProto";
 option java_outer_classname = "WeatherProto";
 
 package weather;
 
-// Definição dos 5 serviços solicitados
+// Definição dos 5 serviços
 service WeatherService {
   rpc ObterTemperaturaAtual (CityRequest) returns (TemperatureResponse);
   rpc PrevisaoCincoDias (CityRequest) returns (ForecastResponse);
