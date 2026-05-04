@@ -1,6 +1,6 @@
-package com.exemplo.client.controller;
+package com.weatheringu.weatherProto;
 
-import com.exemplo.weather.grpc.*;
+import com.weatheringu.weatherProto.grpc.*;
 import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.web.bind.annotation.*;
 

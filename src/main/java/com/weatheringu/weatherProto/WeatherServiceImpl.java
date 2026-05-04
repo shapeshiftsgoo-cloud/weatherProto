@@ -1,6 +1,6 @@
-package com.exemplo.server.service;
+package com.weatheringu.weatherProto;
 
-import com.exemplo.weather.grpc.*;
+import com.weatheringu.weatherProto.grpc.*;
 import io.grpc.stub.StreamObserver;
 import net.devh.boot.grpc.server.service.GrpcService;
 
