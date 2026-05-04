@@ -5,13 +5,12 @@ import net.devh.boot.grpc.client.inject.GrpcClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-
 @RestController
 @RequestMapping("/")
 public class WeatherController {
-
+    
     // Injeta o stub para comunicação síncrona (bloqueante) com o servidor gRPC
-    @GrpcClient("weather-service")
+    @Autowired
     private WeatherServiceGrpc.WeatherServiceBlockingStub weatherStub;
 
     @PostMapping("/cidade")
