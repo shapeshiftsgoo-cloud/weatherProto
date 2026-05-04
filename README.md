@@ -69,5 +69,9 @@ Como uma requisição HTTP vira uma chamada gRPC?
 
     O Cliente recebe o binário, converte de volta para Java, e o Spring MVC pega o valor retornado transformando em resposta HTTP (JSON/Text) enviada de volta para o Postman.
 
- Print da tela do sistema funcionando
+ Print da tela do sistema funcionando:
+
+ <img width="1366" height="637" alt="image" src="https://github.com/user-attachments/assets/b30c646f-21e8-4505-8738-58392bab6d3c" />
+
+
 
