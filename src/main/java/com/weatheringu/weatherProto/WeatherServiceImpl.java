@@ -2,7 +2,8 @@ package com.weatheringu.weatherProto;
 
 import com.weatheringu.weatherProto.grpc.*;
 import io.grpc.stub.StreamObserver;
-import net.devh.boot.grpc.server.service.GrpcService;
+import org.springframework.stereotype.Service;
+
 
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
