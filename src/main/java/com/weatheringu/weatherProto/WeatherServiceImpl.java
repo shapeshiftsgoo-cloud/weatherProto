@@ -7,7 +7,7 @@ import net.devh.boot.grpc.server.service.GrpcService;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
-@GrpcService
+@Service
 public class WeatherServiceImpl extends WeatherServiceGrpc.WeatherServiceImplBase {
 
     // Banco de dados em memória simulado
